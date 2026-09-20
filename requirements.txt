@@ -1,0 +1,16 @@
+# Versões travadas (==) de propósito, não ">=".
+#
+# O app carrega um pipeline scikit-learn serializado (.joblib). Esse formato
+# NÃO é estável entre versões do scikit-learn — carregar um pipeline salvo
+# pela versão 1.8.0 usando a versão 1.4.2, por exemplo, quebra com
+# "ModuleNotFoundError: No module named '_loss'" (testamos e confirmamos).
+# Por isso, as versões abaixo devem ser EXATAMENTE as mesmas usadas para
+# treinar o modelo no notebook 2 (ver célula de instalação no topo do notebook).
+#
+# Se você retreinar o modelo com versões diferentes, atualize este arquivo
+# para bater com as novas versões — e vice-versa.
+streamlit==1.62.0
+pandas==3.0.2
+numpy==2.4.4
+scikit-learn==1.8.0
+joblib==1.5.3
