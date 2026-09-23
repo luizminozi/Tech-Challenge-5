@@ -83,7 +83,7 @@ def categoria_risco(p: float) -> tuple:
 st.title("🧭 Risco de Defasagem — Passos Mágicos")
 st.caption(
     "Ferramenta de apoio à decisão pedagógica, construída a partir do PEDE "
-    "(Pesquisa Extensiva do Desenvolvimento Educacional) 2022-2024. "
+    "(Pesquisa Extensiva do Desenvolvimento Educacional) 2022 -> 2024. "
     "Estima a probabilidade de um aluno estar (ou entrar) em situação de "
     "defasagem de fase, a partir dos indicadores comportamentais e do "
     "histórico do aluno."
@@ -226,7 +226,7 @@ with aba_lote:
     st.subheader("Avaliar vários alunos de uma vez")
     st.markdown(
         "Envie um CSV com uma linha por aluno. Colunas esperadas "
-        "(nomes exatamente iguais, mas a ordem não importa):"
+        "(nomes exatamente iguais mas a ordem não importa):"
     )
     colunas_esperadas = (
         modelo_dict["features_num"][:-1]  #tudo exceto pedra_ano_anterior_ord (tratada à parte)
